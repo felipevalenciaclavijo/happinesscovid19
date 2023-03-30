@@ -132,7 +132,7 @@ happiness_covid %>%
   ggplot() +
   geom_point(aes(x = Life_Ladder, y = total_deaths_per_million)) +
   geom_smooth(aes(x = Life_Ladder, y = total_deaths_per_million, color = region), method = "lm") +
-  geom_text_repel(aes(x = Life_Ladder, y = total_deaths_per_million, label = name, label.size = 0.10)) +
+  geom_text_repel(aes(x = Life_Ladder, y = total_deaths_per_million, label = name), size = 2.5) +
   facet_grid(vars(year), vars(region)) +
   theme_bw()
 ```
@@ -149,7 +149,7 @@ happiness_covid %>%
   ggplot() +
   geom_point(aes(x = Generosity, y = total_deaths_per_million)) +
   geom_smooth(aes(x = Generosity, y = total_deaths_per_million, color = region), method = "lm") +
-  geom_text_repel(aes(x = Generosity, y = total_deaths_per_million, label = name, label.size = 0.10)) +
+  geom_text_repel(aes(x = Generosity, y = total_deaths_per_million, label = name), size = 2.5) +
   facet_grid(vars(year), vars(region)) +
   theme_bw()
 ```
@@ -164,7 +164,7 @@ happiness_covid %>%
   ggplot() +
   geom_point(aes(x = Social_Support, y = total_deaths_per_million)) +
   geom_smooth(aes(x = Social_Support, y = total_deaths_per_million, color = region), method = "lm") +
-  geom_text_repel(aes(x = Social_Support, y = total_deaths_per_million, label = name, label.size = 0.10)) +
+  geom_text_repel(aes(x = Social_Support, y = total_deaths_per_million, label = name), size = 2.5) +
   facet_grid(vars(year), vars(region)) +
   theme_bw()
 ```
@@ -180,7 +180,7 @@ happiness_covid %>%
   ggplot() +
   geom_point(aes(x = LogGDPpercap, y = total_deaths_per_million)) +
   geom_smooth(aes(x = LogGDPpercap, y = total_deaths_per_million, color = region), method = "lm") +
-  geom_text_repel(aes(x = LogGDPpercap, y = total_deaths_per_million, label = name, label.size = 0.10)) +
+  geom_text_repel(aes(x = LogGDPpercap, y = total_deaths_per_million, label = name), size = 2.5) +
   facet_grid(vars(year), vars(region)) +
   theme_bw()
 ```
@@ -196,7 +196,7 @@ happiness_covid %>%
   ggplot() +
   geom_point(aes(x = LifeExp, y = total_deaths_per_million)) +
   geom_smooth(aes(x = LifeExp, y = total_deaths_per_million, color = region), method = "lm") +
-  geom_text_repel(aes(x = LifeExp, y = total_deaths_per_million, label = name, label.size = 0.10)) +
+  geom_text_repel(aes(x = LifeExp, y = total_deaths_per_million, label = name), size = 2.5) +
   facet_grid(vars(year), vars(region)) +
   theme_bw()
 ```
@@ -212,7 +212,7 @@ happiness_covid %>%
   ggplot() +
   geom_point(aes(x = Freedom, y = total_deaths_per_million)) +
   geom_smooth(aes(x = Freedom, y = total_deaths_per_million, color = region), method = "lm") +
-  geom_text_repel(aes(x = Freedom, y = total_deaths_per_million, label = name, label.size = 0.10)) +
+  geom_text_repel(aes(x = Freedom, y = total_deaths_per_million, label = name), size = 2.5) +
   facet_grid(vars(year), vars(region)) +
   theme_bw()
 ```
@@ -228,7 +228,7 @@ happiness_covid %>%
   ggplot() +
   geom_point(aes(x = Corruption, y = total_deaths_per_million)) +
   geom_smooth(aes(x = Corruption, y = total_deaths_per_million, color = region), method = "lm") +
-  geom_text_repel(aes(x = Corruption, y = total_deaths_per_million, label = name, label.size = 0.10)) +
+  geom_text_repel(aes(x = Corruption, y = total_deaths_per_million, label = name), size = 2.5) +
   facet_grid(vars(year), vars(region)) +
   theme_bw()
 ```
@@ -244,7 +244,7 @@ happiness_covid %>%
   ggplot() +
   geom_point(aes(x = Positive_affect, y = total_deaths_per_million)) +
   geom_smooth(aes(x = Positive_affect, y = total_deaths_per_million, color = region), method = "lm") +
-  geom_text_repel(aes(x = Positive_affect, y = total_deaths_per_million, label = name, label.size = 0.10)) +
+  geom_text_repel(aes(x = Positive_affect, y = total_deaths_per_million, label = name), size = 2.5) +
   facet_grid(vars(year), vars(region)) +
   theme_bw()
 ```
@@ -260,7 +260,7 @@ happiness_covid %>%
   ggplot() +
   geom_point(aes(x = Negative_affect, y = total_deaths_per_million)) +
   geom_smooth(aes(x = Negative_affect, y = total_deaths_per_million, color = region), method = "lm") +
-  geom_text_repel(aes(x = Negative_affect, y = total_deaths_per_million, label = name, label.size = 0.10)) +
+  geom_text_repel(aes(x = Negative_affect, y = total_deaths_per_million, label = name), size = 2.5) +
   facet_grid(vars(year), vars(region)) +
   theme_bw()
 ```
