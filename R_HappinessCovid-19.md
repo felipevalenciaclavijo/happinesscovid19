@@ -1,7 +1,7 @@
 ---
 title: "The Covid-19 Effects on the World Happiness Scores"
 author: "Felipe Valencia"
-date: "`r format(Sys.time(), '%B %d, %Y')`"
+date: "marzo 30, 2023"
 output:
   html_document:  
     keep_md: true
@@ -13,20 +13,12 @@ output:
     fig_align: 'center'
 ---
 
-```{r, echo=FALSE}
-knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
-```
 
-```{r load_libraries, include=FALSE}
-# Load libraries
-library(tidyverse)
-library(readxl)
-library(downloader)
-library(lubridate)
-library(ggrepel)
-```
 
-```{r load_data}
+
+
+
+```r
 # Import datasets
 
 # Read xls of the happiness report data from 2005 to 2022
@@ -44,7 +36,6 @@ countries_ISO3166 <- read.csv("https://github.com/lukes/ISO-3166-Countries-with-
 
 # Import the covid dataset from Our World in Data using readr from the Tidyverse
 covid <- read_csv("https://covid.ourworldindata.org/data/owid-covid-data.csv")
-
 ```
 
 ## Background
@@ -53,7 +44,8 @@ In this project, members of the BYU-Idaho Online Data Science Society (BYUIODSS)
 
 ## Data Wrangling
 
-```{r tidy_data}
+
+```r
 # Clean & wrangle data
 
 # Select only the variables we need
@@ -110,12 +102,12 @@ covid_20_22_region <- happiness_covid %>%
          Corruption = mean(Corruption, na.rm = T),
          Positive_affect = mean(Positive_affect, na.rm = T),
          Negative_affect = mean(Negative_affect, na.rm = T))
-
 ```
 
 ## Data Visualization
 
-```{r plot_data0}
+
+```r
 # Plot & visualize data
 
 covid_20_22_region %>%
@@ -127,9 +119,12 @@ covid_20_22_region %>%
   theme_bw()
 ```
 
+![](R_HappinessCovid-19_files/figure-html/plot_data0-1.png)<!-- -->
 
 
-```{r plot_data}
+
+
+```r
 # Plot & visualize data
 
 happiness_covid %>%
@@ -142,8 +137,11 @@ happiness_covid %>%
   theme_bw()
 ```
 
+![](R_HappinessCovid-19_files/figure-html/plot_data-1.png)<!-- -->
 
-```{r plot_data3}
+
+
+```r
 # Plot & visualize data
 
 happiness_covid %>%
@@ -155,7 +153,10 @@ happiness_covid %>%
   facet_grid(vars(year), vars(region)) +
   theme_bw()
 ```
-```{r plot_data4}
+
+![](R_HappinessCovid-19_files/figure-html/plot_data3-1.png)<!-- -->
+
+```r
 # Plot & visualize data
 
 happiness_covid %>%
@@ -168,7 +169,10 @@ happiness_covid %>%
   theme_bw()
 ```
 
-```{r plot_data5}
+![](R_HappinessCovid-19_files/figure-html/plot_data4-1.png)<!-- -->
+
+
+```r
 # Plot & visualize data
 
 happiness_covid %>%
@@ -181,7 +185,10 @@ happiness_covid %>%
   theme_bw()
 ```
 
-```{r plot_data6}
+![](R_HappinessCovid-19_files/figure-html/plot_data5-1.png)<!-- -->
+
+
+```r
 # Plot & visualize data
 
 happiness_covid %>%
@@ -194,7 +201,10 @@ happiness_covid %>%
   theme_bw()
 ```
 
-```{r plot_data7}
+![](R_HappinessCovid-19_files/figure-html/plot_data6-1.png)<!-- -->
+
+
+```r
 # Plot & visualize data
 
 happiness_covid %>%
@@ -207,7 +217,10 @@ happiness_covid %>%
   theme_bw()
 ```
 
-```{r plot_data8}
+![](R_HappinessCovid-19_files/figure-html/plot_data7-1.png)<!-- -->
+
+
+```r
 # Plot & visualize data
 
 happiness_covid %>%
@@ -220,7 +233,10 @@ happiness_covid %>%
   theme_bw()
 ```
 
-```{r plot_data9}
+![](R_HappinessCovid-19_files/figure-html/plot_data8-1.png)<!-- -->
+
+
+```r
 # Plot & visualize data
 
 happiness_covid %>%
@@ -233,7 +249,10 @@ happiness_covid %>%
   theme_bw()
 ```
 
-```{r plot_data10}
+![](R_HappinessCovid-19_files/figure-html/plot_data9-1.png)<!-- -->
+
+
+```r
 # Plot & visualize data
 
 happiness_covid %>%
@@ -245,5 +264,7 @@ happiness_covid %>%
   facet_grid(vars(year), vars(region)) +
   theme_bw()
 ```
+
+![](R_HappinessCovid-19_files/figure-html/plot_data10-1.png)<!-- -->
 
 ## Conclusions
